@@ -13,7 +13,7 @@ shift(@ARGV) if $ARGV[0] && $ARGV[0] eq 'Build';
 Module::Build->new(
 	module_name        => 'WebService::Advogato',
 	license            => 'perl',
-	dist_version_from  => 'Advogato.pm',
+	dist_version_from  => 'lib/WebService/Advogato.pm',
 	dist_author        => 'Jaldhar H. Vyas <jaldhar@braincells.com>',
 	requires           => { 'RPC::XML' => '0.53', },
 	create_makefile_pl => 'traditional',
