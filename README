@@ -1,0 +1,29 @@
+WebService/Advogato version 1.00
+================================
+
+This module implements the XML-RPC interface to the diaries at
+www.advogato.org a site for developers of free software.
+
+INSTALLATION
+
+To install this module type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+  RPC-XML 0.53
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2003 Jaldhar H. Vyas
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself. 
+
+$Id: README,v 1.1 2003/04/11 13:22:16 jaldhar Exp $
