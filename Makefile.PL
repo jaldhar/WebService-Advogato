@@ -5,7 +5,7 @@ WriteMakefile
           'PL_FILES' => {},
           'INSTALLDIRS' => 'site',
           'NAME' => 'WebService::Advogato',
-          'VERSION_FROM' => 'Advogato.pm',
+          'VERSION_FROM' => 'lib/WebService/Advogato.pm',
           'PREREQ_PM' => {
                            'RPC::XML' => '0.53'
                          }

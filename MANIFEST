@@ -1,10 +1,10 @@
-Advogato.pm
 Build.PL
 Changes
 debian/changelog
 debian/control
 debian/copyright
 debian/rules
+lib/WebService/Advogato.pm
 Makefile.PL
 MANIFEST
 MANIFEST.SKIP
