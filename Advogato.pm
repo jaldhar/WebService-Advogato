@@ -6,10 +6,10 @@ use RPC::XML::Client;
 use strict;
 use vars qw($VERSION);
 
-$VERSION = '1.00';
+$VERSION = '1.1.0';
 
 #
-# $Id: Advogato.pm,v 1.1 2003/04/11 18:21:48 jaldhar Exp $
+# $Id: Advogato.pm,v 1.2 2004/04/04 06:29:10 jaldhar Exp $
 #
 
 sub new()
@@ -55,6 +55,13 @@ sub capitalize($)
   return $self->_call('test.capitalize', RPC_STRING($x));
 }
 
+sub exists($)
+{
+  my ($self, $user) = @_;
+
+  return $self->_call('user.exists', RPC_STRING($user));
+}
+
 sub get($$)
 {
   my ($self, $user, $index) = @_;
@@ -81,6 +88,13 @@ sub len($)
   my ($self, $user) = @_;
 
   return $self->_call('diary.len', RPC_STRING($user));
+}
+
+sub level($)
+{
+  my ($self, $user) = @_;
+
+  return $self->_call('cert.get', RPC_STRING($user));
 }
 
 sub set($$)
@@ -152,23 +166,47 @@ in.
 
 =item $int_length = len($string_user)
 
-Return the number of entries in a diary.
+Return the number of entries in a diary.  This implements the diary.len RPC 
+function.
 
 =item $string_html = get($string_user, $int_index)
 
 Return a diary entry. The index is zero-based, so if I<len> returns 2
-then valid indices are 0 and 1.
+then valid indices are 0 and 1.  This implements the diary.get RPC function.
 
 =item ($date_created, $date_updated) = getDates($string_user, $int_index)
 
 Return the creation and last updated dates of a diary entry. If the entry
 has not been updated then the updated date will be the same as the
-creation date.
+creation date.  This implements the diary.getDates RPC function.
 
 =item set($int_index, $string_html)
 
-Set a diary entry. Use -1 as the index to post a new entry, although the
-value returned by I<len> is also acceptable.
+Sets a diary entry. Use -1 as the index to post a new entry, although the
+value returned by I<len> is also acceptable.  This implements the diary.set 
+RPC function.
+
+=back
+
+=head2 User related methods
+
+=over 4
+
+=item $int_exists = exists($string_user) 
+
+Returns zero if the user does not exist, or one if he does.  This implements
+the user.exists RPC function.
+
+=back
+
+=head2 Certification related methods
+
+=over 4
+
+=item $string_level = level($string_user)
+ 
+Returns the certification level of the requested user.  This implements the
+cert.get RPC function.
 
 =back
 
@@ -180,23 +218,24 @@ These methods are only useful for testing purposes.
 
 =item $string_capitalized = capitalize($string)
 
-Capitalize a string
+Capitalized a string.  This implements the test.capitalize RPC function.
 
 =item ($string, $int) = guess()
 
-Guess a number.  (Actually always returns 'You guessed' and 42.)
+Guesses a number.  (Actually always returns 'You guessed' and 42.)
 
 =item $int = square($int)
 
-Square a number.
+Squares a number.  This implements the test.square RPC function.
 
 =item ($int_sum, $int_product) = sumprod($int_x, $int_y)
 
-Return the sum and product of a pair of numbers
+Returns the sum and product of a pair of numbers.  This implements the 
+test.sumprod RPC function.
 
 =item $int_len = strlen($string)
 
-Return the length of a string
+Returns the length of a string.  This implements the test.strlen RPC function.
 
 =back
 
