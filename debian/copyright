@@ -1,0 +1,10 @@
+This is the debian package for the WebService::Advogato module.
+It was created by Jaldhar H. Vyas <jaldhar@debian.org> using dh-make-perl.
+
+The upstream author is: Jaldhar H. Vyas, <jaldhar@braincells.com>.
+
+Copyright (c) 2003, Consolidated Braincells Inc.
+
+This library is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.  See /usr/share/doc/perl/copyright
+
