@@ -7,6 +7,7 @@ debian/copyright
 debian/rules
 Makefile.PL
 MANIFEST
+MANIFEST.SKIP
 META.yml
 README
 t/0-signature.t
