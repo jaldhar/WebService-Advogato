@@ -1,0 +1,10 @@
+Advogato.pm
+Changes
+Makefile.PL
+MANIFEST
+README
+debian/changelog
+debian/control
+debian/copyright
+debian/rules
+t/1.t
