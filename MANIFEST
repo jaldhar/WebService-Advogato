@@ -1,10 +1,12 @@
 Advogato.pm
+Build.PL
 Changes
-Makefile.PL
-MANIFEST
-README
 debian/changelog
 debian/control
 debian/copyright
 debian/rules
+Makefile.PL
+MANIFEST
+META.yml
+README
 t/1.t
