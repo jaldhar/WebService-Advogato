@@ -48,7 +48,7 @@ install:
 	dh_installdirs
 
 	# Add here commands to install the package into debian/$(PACKAGE).
-	./Build install  --installdirs=vendor --destdir=$(TMP)
+	./Build install installdirs=vendor destdir=$(TMP)
 
 
 # Build architecture-dependent files here.

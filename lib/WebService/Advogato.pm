@@ -249,7 +249,7 @@ Jaldhar H. Vyas, E<lt>jaldhar@braincells.comE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (c) 2003, Consolidated Braincells Inc.
+Copyright (c) 2004, Consolidated Braincells Inc.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
